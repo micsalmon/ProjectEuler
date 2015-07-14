@@ -9,12 +9,10 @@
  * What is the smallest positive number that is evenly divisible by all
  * of the numbers from 1 to 20 ?
  */
-	
+
+$num = 1;	
 for ($x = 1; $x <= 20; $x++) {
-	$num = 1;
-	if ($num % $x) {
-		printf($num);
-	} else {
+	while ($num % $x == 0) {
 		$num++;
 	}
 }
