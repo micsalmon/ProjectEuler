@@ -9,6 +9,7 @@
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 
+// Reverses any number 
 function reverseNum($num) {
     $reverse = 0;
     $remainder = 0;
@@ -22,6 +23,7 @@ function reverseNum($num) {
     return $reverse;
 }
 
+// Checks if reverseNum() is a palindrome number 
 function isPalindrome($num) {
     if (reverseNum($num) == $num) {
         return 1;
@@ -30,6 +32,7 @@ function isPalindrome($num) {
     }
 }
 
+// Finds the largest palindrome number using isPalindrome() and certain $x and $y limits
 function largestPalindrome() {
     $largest = 0;
     for ($x = 500; $x <= 999; $x++) {
